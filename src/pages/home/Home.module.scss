@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+
+.container{
+    &__flex{
+        margin: 3em 8vw 4em 8vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__column{
+        flex-direction: column;
+    }
+    &__aboutme{
+        margin: 10rem auto 11rem auto;
+        display: flex;
+        justify-content: center ;
+    }
+}
+
+.title{
+    font-size: 2.5em;
+    width: 40vw;
+}
+
+
+.subtitle{
+    font-size: 1.5em;
+    width: 40vw;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.highlight{
+    color: $primary-color;
+}
+
+.link__home{
+    margin: 0; 
+    border: none;
+    background-color: $primary-color;
+    color: $secondary-color;
+    box-shadow: 1px 1px 8px $secondary-color;
+}
+
+.link__aboutme{
+    margin: auto;
+    margin: 0 calc(50% - 4.80em);
+    padding: 1em 2em;
+    font-size: 20px;
+}
+
+.text__aboutme{
+    margin: 0 2em;
+    width: 30%;
+    font-size: 24px;
+}
+
+.portfolio__frame{
+    background-size: cover;
+    background-image: url("../../assets/portfolio/aluroni.png");
+    width: 20%;
+    height: 20%;
+    border-radius: 12px;
+}

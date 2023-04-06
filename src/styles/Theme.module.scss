@@ -1,0 +1,50 @@
+@import './variables';
+
+.link{
+    color: $primary-color;  
+    &__conversion{
+        border: 2px solid $primary-color;
+        box-shadow: 1px 1px 2px #000000;
+        border-radius: 16px;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5em 1.5em 0.6em 1.5em;
+        margin: 3.25em 8vw 2em 2em;
+        box-sizing: border-box;
+    }
+    &__tabs{
+        color: $secondary-color;
+        font-weight: 700;
+        text-decoration: none;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin: 2.75em 2em 2em 2em;
+    }
+    &__tabs::after{ 
+        content: "";
+        position: absolute;
+        background-color: $primary-color;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+    }
+    &__tabs:hover::after{
+        width: 100%;
+    }
+}
+
+.title{
+    color: $primary-color;
+    font: 700;
+    align-items: center;
+    align-self: center;
+}
+
+.separator{
+    width: 25%;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    margin-top: 10em;
+}

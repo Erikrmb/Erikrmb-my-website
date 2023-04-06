@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__tabs{
+        margin: 1em 2em;
+    }
+    &__logo{
+        margin: 1em 2em 1em 8vw;
+    }
+}
