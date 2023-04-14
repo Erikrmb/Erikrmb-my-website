@@ -56,6 +56,7 @@ export default function NavBar(){
             <div >
                 {conversionRoutes.map( (route, index) => 
                     <Link key={index} className={classNames({
+                        [stylesTheme.link__button]:true,
                         [stylesTheme.link__conversion]: true,
                         [stylesTheme.link]: true
                     })} 

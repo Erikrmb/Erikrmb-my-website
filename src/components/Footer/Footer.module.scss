@@ -1,0 +1,26 @@
+.footer{
+    &__links{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        margin: 4em 0 4em 8vw;
+    }
+    &__text{
+        font-size: 32px;
+        font-weight: 400;
+        margin: 0 0 0 2em   ;
+    }
+    &__socials{
+        display: flex;
+        align-items: center;
+        margin: 1em 2em 1em 2em;
+    }
+    &__container{
+        display: flex;
+        align-self: flex-end;
+    }
+    &__copyright{
+        margin: 4em 8vw 4em 0;
+        align-self: flex-end;
+    }
+}
