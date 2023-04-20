@@ -27,8 +27,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: "npm"
-        cache-dependency-path: erikrmbsite/package-lock.json
-    - run: cd erikrmbsite
     - run: npm ci
     - run: npm run build 
     - run: npm start
