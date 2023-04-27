@@ -8,6 +8,9 @@ jobs:
   EC2:
     runs-on: ubuntu-latest
     steps:
+    - name: Clean files
+      run: rm -r build
+      
     - name: Download a Build Artifact
       uses: actions/download-artifact@v3.0.0
       with:
@@ -34,7 +37,6 @@ jobs:
           sudo apt-get update
           chmod +x build
           cat /dev/null > nohup.out
-          rm -r build
           nohup build > nohup.out 2> nohup.err < /dev/null &
 
         
