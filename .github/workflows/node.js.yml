@@ -28,12 +28,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: "npm"
-<<<<<<< HEAD
     - run: npm ci
     - run: npm run build 
     - run: npm start
 
-=======
     - name: Install dependencies
       run: npm install
       
@@ -55,5 +53,3 @@ jobs:
     needs: build
     uses: ./.github/workflows/EC2.yml
     secrets: inherit
-    
->>>>>>> 0e41049c603507648cc20dd9523ad1e404b6937f
