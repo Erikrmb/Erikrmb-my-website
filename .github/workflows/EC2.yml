@@ -13,7 +13,7 @@ jobs:
       with:
     # Artifact name
         name: react-app
-        path: ./build
+        path: build
     - uses: actions/checkout@v3
     
     - name: Deploy to Staging server
@@ -35,6 +35,6 @@ jobs:
           sudo apt-get update
           chmod +x build
           cat /dev/null > nohup.out
-          nohup ./build > nohup.out 2> nohup.err < /dev/null &
+          nohup build > nohup.out 2> nohup.err < /dev/null &
 
         
