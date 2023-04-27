@@ -13,7 +13,6 @@ jobs:
       with:
     # Artifact name
         name: react-app
-        path: build
     - uses: actions/checkout@v3
     
     - name: Deploy to Staging server
