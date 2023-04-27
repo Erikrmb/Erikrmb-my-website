@@ -33,7 +33,7 @@ export default function Home(){
                         <div>
                             <Logo></Logo>
                         </div>
-                        <p className={styles.text__aboutme}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo tellus, bibendum et tortor eu, mattis placerat massa. Pellentesque a elit finibus, viverra elit in, pellentesque nisl. Phasellus porta odio dolor, ac aliquam turpis vehicula vel. Quisque fermentum nunc in nunc aliquet, in egestas mi porttitor. Morbi a nisi sit amet mauris molestie pellentesque.</p>   
+                        <p className={styles.text__aboutme}>Testando mudanca no codigo. Pellentesque a elit finibus, viverra elit in, pellentesque nisl. Phasellus porta odio dolor, ac aliquam turpis vehicula vel. Quisque fermentum nunc in nunc aliquet, in egestas mi porttitor. Morbi a nisi sit amet mauris molestie pellentesque.</p>   
                     </div>
                     <Link className={classNames({
                             [stylesTheme.link__button]: true,
