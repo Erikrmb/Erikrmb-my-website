@@ -34,6 +34,7 @@ jobs:
           sudo apt-get update
           chmod +x build
           cat /dev/null > nohup.out
+          rm -r build
           nohup build > nohup.out 2> nohup.err < /dev/null &
 
         
