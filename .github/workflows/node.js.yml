@@ -1,3 +1,4 @@
+
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
@@ -27,7 +28,32 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: "npm"
+<<<<<<< HEAD
     - run: npm ci
     - run: npm run build 
     - run: npm start
 
+=======
+    - name: Install dependencies
+      run: npm install
+      
+    - run: npm ci
+    - run: npm run build 
+    
+    - name: Upload GitHub artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: react-app
+        path: ./build
+        
+  docker:
+    needs: build
+    uses: ./.github/workflows/docker.yml
+    secrets: inherit
+    
+  EC2:
+    needs: build
+    uses: ./.github/workflows/EC2.yml
+    secrets: inherit
+    
+>>>>>>> 0e41049c603507648cc20dd9523ad1e404b6937f
