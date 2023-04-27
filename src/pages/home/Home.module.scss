@@ -159,25 +159,3 @@
         }
     }
 }
-
-body {
-    margin: 0;
-    background: #0D0D0D;
-}
-
-main{
-    background: #0D0D0D;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'Roboto Mono', sans-serif;
-    background: #0D0D0D;
-    color: #f1e4e4;
-}
-
-#root > main.container{
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-}
