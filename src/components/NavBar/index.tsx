@@ -23,7 +23,7 @@ export default function NavBar(){
     }]
     const conversionRoutes = [{
         label: 'Contact me',
-        to: '/contact'
+        to: 'mailto:erikrmb@gmail.com'
     }]
     return(
         <nav className={styles.container}>
