@@ -2,17 +2,15 @@
 @import './styles/_variables.scss';
 
 html{
-  background: #0D0D0D;
 }
 body {
   margin: 0;
-  background: #0D0D0D;
+  background-color: #0D0D0D;
 }
 * {
   box-sizing: border-box;
   font-family: 'Roboto Mono', sans-serif;
   color: #f1e4e4;
-  background: #0D0D0D;
 }
 
 #root > main.container{

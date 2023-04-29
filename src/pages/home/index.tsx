@@ -68,7 +68,7 @@ export default function Home(){
                                 [styles.portfolio__card__imageAluroni]:true,
                             })}></div>
                             <div className={styles.portfolio__infoBar}>
-                                <div>
+                                <div className={styles.portfolio__background}>
                                     <h2 className={styles.portfolio__title}>Aluroni</h2>
                                     <p className={styles.portfolio__text}>Project made using React</p>
                                 </div>
