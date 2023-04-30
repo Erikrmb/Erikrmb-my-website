@@ -6,8 +6,19 @@ import stylesTheme from '../../styles/Theme.module.scss'
 import classNames from "classnames";
 import Logo from "../../components/Logo";
 import Footer from "../../components/Footer"
+import { useState } from "react";
 
 export default function Home(){
+    const [colorSpan, setColorSpan] = useState(styles.highlight);
+    
+    function changeColor(){
+        if (colorSpan === styles.highlight){
+            setColorSpan(styles.highlight__rgb)
+        }else{
+            setColorSpan(styles.highlight)
+        }
+        
+    }
     return(
         <body>
             <section className={styles.container}>
@@ -15,7 +26,7 @@ export default function Home(){
                 <main>
                 <section className={styles.container__flex}>
                     <div className={styles.container__column}>     
-                        <h1 className={styles.title}>Hi! I am <span className={styles.highlight}>Erik</span>, fullstack developer and web designer</h1>
+                        <h1 className={styles.title}>Hi! I am <span className={colorSpan}>Erik</span>, fullstack developer and web designer</h1>
                         <hr></hr>
                         <h2 className={styles.subtitle}>I am a lifelong learner who loves to explore new things on my own and apply that onto new projects.</h2>
                         <Link className={classNames({
@@ -27,6 +38,7 @@ export default function Home(){
                     </div>
                     <Banner></Banner>
                 </section>
+                <button type="reset" className={styles.gaming__mode} onClick={changeColor}>Teste</button>
                 <section>
                     <hr className={stylesTheme.separator}></hr>
                     <div className={styles.container__aboutme}>
