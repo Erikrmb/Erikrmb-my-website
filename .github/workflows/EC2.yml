@@ -19,16 +19,17 @@ jobs:
         port: 22
         script: |
           rm -r build
-          
+
     - name: Download a Build Artifact
-      uses: actions/download-artifact@v3.0.0
+      uses: actions/download-artifact@v3.0.2
       with:
-    # Artifact name
+        # Artifact name
         name: react-app
+        # Destination path
         path: build
     
     - name: Deploy to Staging server
-      uses: easingthemes/ssh-deploy@main
+      uses: easingthemes/ssh-deploy@v4.1.8
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
