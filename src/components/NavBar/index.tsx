@@ -24,7 +24,7 @@ export default function NavBar(){
         to: '/portfolio'
     },{
         label: 'About me',
-        to: '/aboutme'
+        to: '/about'
     },{
         label: 'Blog',
         to: '/blog'

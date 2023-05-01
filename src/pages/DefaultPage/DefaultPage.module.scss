@@ -1,0 +1,219 @@
+@import '../../styles/variables';
+
+.container{
+    background-color: #0D0D0D;
+    &__flex{
+        margin: 3em 8vw 4em 8vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__column{
+        flex-direction: column;
+    }
+    &__aboutme{
+        margin: 10rem auto 11rem auto;
+        display: flex;
+        justify-content: center ;
+    }
+    &__portfolio{
+        margin: 16rem auto 11rem auto;
+        display: flex;
+        justify-content: center;
+        gap: 8rem;
+    }
+}
+
+.title{
+    font-size: 2.5em;
+    width: 40vw;
+}
+
+
+.subtitle{
+    font-size: 1.5em;
+    width: 40vw;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.highlight{
+    color: $primary-color;
+    &__rgb{
+        animation: rainbow 2.5s linear;
+		animation-iteration-count: infinite;
+    }
+}
+
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+
+.link__banner{
+    display: block;
+    border: none;
+    background-color: $primary-color;
+    color: $secondary-color;
+    box-shadow: 1px 1px 8px $secondary-color;
+    width: fit-content;
+}
+
+.link__aboutme{
+    padding: 1em 2em;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.text__aboutme{
+    margin: 0 2em;
+    width: 30%;
+    font-size: 24px;
+}
+
+.portfolio{
+    &__featured{
+        padding: 0.5em 1em;
+        border-radius: 12px;
+        position: absolute;
+        color: $primary-color;
+        font-weight: 700;
+        font-size: 16px;
+        background-color: #1f1f1f;
+        color: $primary-color;
+        margin-left: 1.5em;
+    }
+    &__card{
+        width: 25%;
+        height: 332px;
+        background-color: #1f1f1f;
+        border-radius: 12px;
+        z-index: 2;
+        &__image{
+            height: 200px;
+            background-size: cover;
+            &Aluroni{
+                background-image: url("../../assets/portfolio/aluroni.png"); 
+                border-radius: 12px 12px 0 0;
+            }
+        }
+    }
+    &__title{
+        font-size: 32px;
+        color: $primary-color;
+        background-color: #1f1f1f;
+        margin-top: 0.5em;
+    }
+    &__infoBar{
+        display: flex;
+        margin-left: 2em;
+        justify-content: space-between;
+        z-index: -1;
+    }
+    &__link{
+        text-decoration: none;
+        align-self: flex-end;
+        margin: 0 2em 2em 0;
+        padding: 0.5em 1em;
+        border-radius: 12px;
+        background-color: $primary-color;
+        color: $secondary-color;
+        box-shadow: 1px 1px 8px $secondary-color;
+    }
+    &__brackets{
+        &__left{
+            position: absolute;
+            margin-left: 8vw;
+            margin-top: 35vh;
+            z-index: 0;
+        }
+        &__right{
+            position: absolute;
+            margin-top: 10vh;
+            margin-left: 78vw;
+            z-index: 0;
+        }
+    }
+}
+
+
+.blog{
+    &__container{
+        margin-top: 15rem;
+        margin-bottom: 20rem;
+    }
+    &__card{
+        display: flex;
+        justify-content: center;
+        margin: 5rem;
+        &__image{
+            width: 25%;
+            height: 20rem;
+            background-size: cover;
+            &Aluroni{
+                background-image: url("../../assets/portfolio/aluroni.png"); 
+                border-radius: 12px;
+            }
+        }
+    }
+    &__infoBar{
+        display: flex;
+        flex-direction: column;
+        margin-left: 8rem;
+        justify-content: center;
+        &__title{
+            color: $primary-color;
+            font-weight: 700;
+            font-size: 40px;
+            margin: 0;
+        }
+        &__text{
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+}
+
+.gaming__mode{
+    position: fixed;
+    z-index: 4;
+    margin-top: 26em;
+    margin-left: 90%;
+    width: 68px;
+    height: 68px;
+}
