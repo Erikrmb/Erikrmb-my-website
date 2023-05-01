@@ -3,19 +3,19 @@ import styles from '../NavBar/Navbar.module.scss'
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 export default function NavBar(){
-    const [color, setColor] = useState(stylesTheme.color);
+    // const [color, setColor] = useState(stylesTheme.color);
     
-    function changeColor(){
-        if (color === stylesTheme.color){
-            setColor(stylesTheme.color__rgb)
-        }else{
-            setColor(stylesTheme.color)
-        }
+    // function changeColor(){
+    //     if (color === stylesTheme.color){
+    //         setColor(stylesTheme.color__rgb)
+    //     }else{
+    //         setColor(stylesTheme.color)
+    //     }
         
-    }
+    // }
     const routes =[{
         label: 'Home',
         to: '/'
@@ -51,7 +51,7 @@ export default function NavBar(){
                 </svg>
                 <h2 className={classNames({
                             [stylesTheme.title]: true,
-                            [color]: true,
+                            // [color]: true,
                         })}>Erikrmb</h2>
             </div>
             <div className={classNames({
