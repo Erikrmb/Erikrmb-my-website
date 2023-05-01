@@ -9,17 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-#     - name: executing remote ssh commands using password
-#       uses: appleboy/ssh-action@master
-#       with:
-#         host: ${{ secrets.REMOTE_HOST }}
-#         username: ${{ secrets.REMOTE_USER }}
-#         key: ${{ secrets.SSH_PRIVATE_KEY }}
-#         port: 22
-#         script: |
-#           sudo rm -r build
-#           sudo rm nohup.err
-#           sudo rm nohup.out
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        script: |
+          sudo rm -r build
+          cat /dev/null > nohup.out
+          sudo rm nohup.out
+          cat /dev/null > nohup.err
+          sudo rm nohup.err
 
     - name: Download a Build Artifact
       uses: actions/download-artifact@v3.0.2
@@ -45,7 +47,6 @@ jobs:
         script: |
           sudo apt-get update
           chmod +x build
-          cat /dev/null > nohup.out
           nohup build > nohup.out 2> nohup.err < /dev/null &
 
         
