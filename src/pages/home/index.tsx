@@ -9,13 +9,13 @@ import Footer from "../../components/Footer"
 import { useState } from "react";
 
 export default function Home(){
-    const [colorSpan, setColorSpan] = useState(styles.highlight);
+    const [color, setColor] = useState(stylesTheme.color);
     
     function changeColor(){
-        if (colorSpan === styles.highlight){
-            setColorSpan(styles.highlight__rgb)
+        if (color === stylesTheme.color){
+            setColor(stylesTheme.color__rgb)
         }else{
-            setColorSpan(styles.highlight)
+            setColor(stylesTheme.color)
         }
         
     }
@@ -26,13 +26,13 @@ export default function Home(){
                 <main>
                 <section className={styles.container__flex}>
                     <div className={styles.container__column}>     
-                        <h1 className={styles.title}>Hi! I am <span className={colorSpan}>Erik</span>, fullstack developer and web designer</h1>
+                        <h1 className={styles.title}>Hi! I am <span className={color}>Erik</span>, fullstack developer and web designer</h1>
                         <hr></hr>
                         <h2 className={styles.subtitle}>I am a lifelong learner who loves to explore new things on my own and apply that onto new projects.</h2>
                         <Link className={classNames({
                             [stylesTheme.link]: true,
                             [stylesTheme.link__button]: true,
-                            [styles.link__banner]: true
+                            [styles.link__banner]: true,
                         })} 
                         to={'/'} >Send a message</Link>
                     </div>
@@ -40,7 +40,10 @@ export default function Home(){
                 </section>
                 <button type="reset" className={styles.gaming__mode} onClick={changeColor}>Teste</button>
                 <section>
-                    <hr className={stylesTheme.separator}></hr>
+                    <hr className={classNames({
+                            [stylesTheme.separator]: true,
+                            [color]:true,
+                        })}></hr>
                     <div className={styles.container__aboutme}>
                         <div>
                             <Logo></Logo>
@@ -50,7 +53,7 @@ export default function Home(){
                     <Link className={classNames({
                             [stylesTheme.link__button]: true,
                             [stylesTheme.link]: true,
-                            [styles.link__aboutme]:true 
+                            [styles.link__aboutme]:true,
                         })}
                         to={'/aboutme'}>Read More</Link>   
                 </section>
@@ -74,28 +77,40 @@ export default function Home(){
                     </div>  
                     <div className={styles.container__portfolio}>
                         <div className={styles.portfolio__card}>
-                            <p className={styles.portfolio__featured}>Featured</p>
+                            <p className={classNames({
+                            [styles.portfolio__featured]: true,
+                            [color]: true,
+                        })} >Featured</p>
                             <div className={classNames({
                                 [styles.portfolio__card__image]:true,
                                 [styles.portfolio__card__imageAluroni]:true,
                             })}></div>
                             <div className={styles.portfolio__infoBar}>
                                 <div className={styles.portfolio__background}>
-                                    <h2 className={styles.portfolio__title}>Aluroni</h2>
+                                    <h2 className={classNames({
+                            [styles.portfolio__title]: true,
+                            [color]: true,
+                        })}>Aluroni</h2>
                                     <p className={styles.portfolio__text}>Project made using React</p>
                                 </div>
                                 <Link className={styles.portfolio__link} to='https://github.com/Erikrmb/aluroni-react-ts'>Check it out</Link>
                             </div>
                         </div>
                         <div className={styles.portfolio__card}>
-                            <p className={styles.portfolio__featured}>Featured</p>
+                            <p className={classNames({
+                            [styles.portfolio__featured]: true,
+                            [color]: true,
+                        })} >Featured</p>
                             <div className={classNames({
                                 [styles.portfolio__card__image]:true,
                                 [styles.portfolio__card__imageAluroni]:true,
                             })}></div>
                             <div className={styles.portfolio__infoBar}>
-                                <div>
-                                    <h2 className={styles.portfolio__title}>Aluroni</h2>
+                                <div className={styles.portfolio__background}>
+                                    <h2 className={classNames({
+                            [styles.portfolio__title]: true,
+                            [color]: true,
+                        })}>Aluroni</h2>
                                     <p className={styles.portfolio__text}>Project made using React</p>
                                 </div>
                                 <Link className={styles.portfolio__link} to='https://github.com/Erikrmb/aluroni-react-ts'>Check it out</Link>
