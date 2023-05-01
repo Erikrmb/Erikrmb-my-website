@@ -19,6 +19,9 @@ jobs:
         port: 22
         script: |
           rm -r build
+          rm nohup.err
+          rm nohup.out
+          sudo nginx -s reload
 
     - name: Download a Build Artifact
       uses: actions/download-artifact@v3.0.2
