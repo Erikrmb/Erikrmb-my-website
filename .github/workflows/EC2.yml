@@ -8,7 +8,7 @@ jobs:
   EC2:
     runs-on: ubuntu-latest
     
-#     steps:
+    steps:
 #     - name: executing remote ssh commands using password
 #       uses: appleboy/ssh-action@master
 #       with:
