@@ -1,6 +1,6 @@
 // import stylesTheme from '../../styles/Theme.module.scss';
 // import { useState } from 'react';
-import styles from '../Home/Home.module.scss';
+import styles from '../home/Home.module.scss';
 import { /*Link,*/ Outlet } from 'react-router-dom';
 import NavBar from 'components/NavBar';
 import Footer from 'components/Footer';
