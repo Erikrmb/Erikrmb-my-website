@@ -1,7 +1,15 @@
-.InDevelopment{
-    width: 80vh;
-    height: 80vh;
+.inDevelopment{
+    &__container{
+        height: 45vh;
+    }
     &__image{
-    background-image: url("../../assets/portfolio/aluroni.png"); 
+        width: 80vh;
+        height: 80vh;
+        margin: 2em auto;
+    }
+    &__text{
+        text-align: center;
+        align-self: center;
+        margin-top:5rem;
     }
 }
