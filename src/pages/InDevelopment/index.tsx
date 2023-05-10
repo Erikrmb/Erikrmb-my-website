@@ -1,5 +1,5 @@
 import styles from "./InDevelopment.module.scss"
-import inDevelopmentBanner from 'assets/inDevelopmentBanner.svg'
+// import inDevelopmentBanner from 'assets/inDevelopmentBanner.svg'
 
 export default function InDevelopment(){
     return(
