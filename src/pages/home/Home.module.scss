@@ -84,10 +84,9 @@
 }
 
 .link__banner{
-    display: block;
     border: none;
+    font: $primary-color;
     background-color: $primary-color;
-    color: $secondary-color;
     box-shadow: 1px 1px 8px $secondary-color;
     width: fit-content;
 }

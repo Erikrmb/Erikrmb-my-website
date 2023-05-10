@@ -26,11 +26,11 @@ export default function Home(){
                     <hr></hr>
                     <h2 className={styles.subtitle}>I am a lifelong learner who loves to explore new things on my own and apply that onto new projects.</h2>
                     <Link className={classNames({
+                        [stylesTheme.link__banner]: true,
                         [stylesTheme.link]: true,
-                        [stylesTheme.link__button]: true,
-                        [styles.link__banner]: true,
+                        [stylesTheme.link__button]:true
                     })} 
-                    to={'/'} >Send a message</Link>
+                    to={'/'}>Send a message</Link>
                 </div>
                 <Banner></Banner>
             </section>

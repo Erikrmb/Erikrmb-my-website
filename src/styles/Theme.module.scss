@@ -57,6 +57,13 @@
         font-weight: 500;
         padding: 0.5em 1.5em 0.6em 1.5em;
     }
+    &__banner{
+        border: none;
+        color: $secondary-color;
+        background-color: $primary-color;
+        box-shadow: 1px 1px 8px $secondary-color;
+        width: fit-content;
+    }
     &__conversion{
         margin: 3.25em 8vw 2em 2em;
         display: block;
