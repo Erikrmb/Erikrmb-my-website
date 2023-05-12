@@ -4,6 +4,9 @@
         display: flex;
         flex-direction: column;
         margin: 4em 0 4em 8vw;
+        text-decoration: none;
+    }&__link{
+        text-decoration: none;
     }
     &__text{
         font-size: 32px;

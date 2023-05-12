@@ -30,7 +30,7 @@ export default function Home(){
                         [stylesTheme.link]: true,
                         [stylesTheme.link__button]:true
                     })} 
-                    to={'/'}>Send a message</Link>
+                    to="mailto:commercial@erikrmb.com">Send a message</Link>
                 </div>
                 <Banner></Banner>
             </section>
@@ -44,7 +44,7 @@ export default function Home(){
                     <div>
                         <Logo></Logo>
                     </div>
-                    <p className={styles.text__aboutme}>Testando mudanca no codigo. Agora site funcionando com load balancer e https.</p>   
+                    <p className={styles.text__aboutme}>I'm a full stack developer who loves learning about new technologies and applying new frameworks onto different projects. Over the past 3 years, I have studied and developed my skills as a developer, until recently I started working as a freelancer. I have been developing some web projects and using cloud providers in the process, such as AWS. I am really interested in new projects, so if you have a job or an idea try checking out my resumé or contacting me!</p>   
                 </div>
                 <Link className={classNames({
                         [stylesTheme.link__button]: true,
@@ -106,8 +106,8 @@ export default function Home(){
                                 <h2 className={classNames({
                         [styles.portfolio__title]: true,
                         [color]: true,
-                    })}>Aluroni</h2>
-                                <p className={styles.portfolio__text}>Project made using React</p>
+                    })}>Voll.med API</h2>
+                                <p className={styles.portfolio__text}>API REST developed in Java</p>
                             </div>
                             <Link className={styles.portfolio__link} to='https://github.com/Erikrmb/aluroni-react-ts'>Check it out</Link>
                         </div>
@@ -118,7 +118,7 @@ export default function Home(){
                         [stylesTheme.link]: true,
                         [styles.link__aboutme]:true 
                     })}
-                    to={'/aboutme'}>Read More</Link>    
+                    to={'/portfolio'}>Read More</Link>    
             </section>
             <section>
                 <hr className={stylesTheme.separator}></hr>
