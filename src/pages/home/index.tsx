@@ -32,7 +32,9 @@ export default function Home(){
                     })} 
                     to="mailto:commercial@erikrmb.com">Send a message</Link>
                 </div>
-                <Banner></Banner>
+                <div className={styles.banner}>
+                    <Banner></Banner>
+                </div>
             </section>
             <button type="reset" className={styles.gaming__mode} onClick={changeColor}>Teste</button>
             <section>
@@ -44,7 +46,7 @@ export default function Home(){
                     <div>
                         <Logo></Logo>
                     </div>
-                    <p className={styles.text__aboutme}>I'm a full stack developer who loves learning about new technologies and applying new frameworks onto different projects. Over the past 3 years, I have studied and developed my skills as a developer, until recently I started working as a freelancer. I have been developing some web projects and using cloud providers in the process, such as AWS. I am really interested in new projects, so if you have a job or an idea try checking out my resumé or contacting me!</p>   
+                    <p className={styles.text__aboutme}>I'm a full stack developer who loves learning about new technologies and applying new frameworks onto different projects. Over the past 3 years, I have studied and developed my skills as a developer, until recently I started working as a freelancer. I am really interested in new projects, so if you have a project or an idea try contacting me!</p>   
                 </div>
                 <Link className={classNames({
                         [stylesTheme.link__button]: true,

@@ -220,3 +220,26 @@
     width: 68px;
     height: 68px;
 }
+
+@media only screen and (max-width: 768px) {
+    .banner{
+        display: none;
+    }
+    .title{
+        font-size: 2.5em;
+        width: 100vw;
+    }
+    .subtitle{
+        font-size: 1.5em;
+        width: 100vw;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .portfolio__brackets__right{
+        display: none;
+    }
+    .portfolio__brackets__left{
+        display: none;
+    }
+
+}
