@@ -243,3 +243,27 @@
     }
 
 }
+
+
+@media only screen and (max-width: 768px) {
+    .container__aboutme{
+     flex-direction: column;
+     width: auto;
+    }
+    .text__aboutme{
+        margin-top: 2em;
+        width: auto;
+    }
+    .container__portfolio{
+        flex-direction: column;
+    }
+    .portfolio__card{
+        width: auto;
+        height: auto;
+        margin: 0 2em;
+
+    }
+    .blog__card{
+        flex-direction: column;
+    }
+}

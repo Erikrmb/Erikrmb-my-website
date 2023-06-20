@@ -4,6 +4,7 @@ import Home from './pages/home';
 import InDevelopment  from './pages/InDevelopment';
 // import About from 'pages/About';
 import DefaultPage from 'pages/DefaultPage';
+import Resume from 'pages/Resume';
 // import Blog from 'pages/Blog';
 
 export default function AppRouter(){
@@ -16,7 +17,7 @@ export default function AppRouter(){
                         <Route path='portfolio' element={<InDevelopment/>}></Route>
                         <Route path='about' element={<InDevelopment/>}></Route>
                         <Route path='blog' element={<InDevelopment/>}></Route>
-                        <Route path='resume' element={<InDevelopment></InDevelopment>}></Route>
+                        <Route path='resume' element={<Resume></Resume>}></Route>
                     </Route>
                 </Routes>
             </Router>

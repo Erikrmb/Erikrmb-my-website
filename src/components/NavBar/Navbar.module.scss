@@ -1,3 +1,6 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/Theme.module.scss';
+
 .container{
     display: flex;
     align-items: center;
@@ -12,8 +15,21 @@
     }
 }
 
+.title{
+    color: $primary-color;
+    font: 700;
+    align-items: center;
+    align-self: center;
+}
+
 @media only screen and (max-width: 768px) {
     .container__tabs{
+        display: none;
+    }
+    .link{
+        display: none;
+    }
+    .title{
         display: none;
     }
 }
