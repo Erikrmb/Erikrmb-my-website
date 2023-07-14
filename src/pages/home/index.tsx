@@ -53,7 +53,7 @@ export default function Home(){
                         [stylesTheme.link]: true,
                         [styles.link__aboutme]:true,
                     })}
-                    to={'/aboutme'}>Read More</Link>   
+                    to={'/about'}>Read More</Link>   
             </section>
             <section>
                 <hr className={stylesTheme.separator}></hr>
