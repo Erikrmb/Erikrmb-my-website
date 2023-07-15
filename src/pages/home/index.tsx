@@ -7,36 +7,79 @@ import Logo from "../../components/Logo";
 import { useState } from "react";
 
 export default function Home(){
-    const [color, setColor] = useState(stylesTheme.color);
     
-    function changeColor(){
-        if (color === stylesTheme.color){
-            setColor(stylesTheme.color__rgb)
-        }else{
-            setColor(stylesTheme.color)
+    
+    const englishText = {
+        "intro":"Hi! I am ",
+        "intro_occupation":", fullstack developer and web designer",
+        "short_about_me":"I am a lifelong learner who loves to explore new things on my own and apply that onto new projects.",
+        "button_send_message":"Send a message",
+        "about_me":"I'm a full stack developer who loves learning about new technologies and applying new frameworks onto different projects. Over the past 3 years, I have studied and developed my skills as a developer, until recently I started working as a freelancer. I am really interested in new projects, so if you have a project or an idea try contacting me!",
+        "featured":"Featured",
+        "project_title":["Aluroni","Voll.med API"],
+        "project_description":["Project made using React","API REST developed in Java"],
+        "button_check_it":"Check it out",
+        "button_read_more":"Read More",
+        "blog_title":["Developing my website Front-end","Developing my website Back-end"],
+        "blog_short":["Understand what is React and how to use it","Understand what is an API and how it works"],
+        "blog_read_more":"Read more",
+        "designed_by":"Website designed and developed by ErikRMB",
+    };
+    const frenchQuebecText = {
+        "intro":"Salut! Je suis ",
+        "intro_occupation":", développeur full stack et concepteur web",
+        "short_about_me":"Je suis un apprenant perpétuel qui aime explorer de nouvelles choses par moi-même et les appliquer à de nouveaux projets.",
+        "button_send_message":"Envoyer un message",
+        "about_me":"Je suis un développeur full stack qui aime apprendre de nouvelles technologies et appliquer de nouveaux frameworks sur différents projets. Au cours des 3 dernières années, j'ai étudié et développé mes compétences en tant que développeur, jusqu'à récemment où j'ai commencé à travailler en tant que freelance. Je suis vraiment intéressé par de nouveaux projets, alors si vous avez un projet ou une idée, essayez de me contacter !",
+        "featured":"En vedette",
+        "project_title":["Aluroni","API Voll.med"],
+        "project_description":["Projet réalisé avec React","API REST développée en Java"],
+        "button_check_it":"Voir le projet",
+        "button_read_more":"Lire la suite",
+        "blog_title":["Développement de mon site web Front-end","Développement de mon site web Back-end"],
+        "blog_short":["Comprendre ce qu'est React et comment l'utiliser","Comprendre ce qu'est une API et comment elle fonctionne"],
+        "blog_read_more":"Lire la suite",
+        "designed_by":"Site web conçu et développé par ErikRMB",
+        };
+        const [currentLanguage, setLanguage] = useState(englishText);
+        const [color, setColor] = useState(stylesTheme.color);
+      
+        function changeLanguage() {
+          if (JSON.stringify(currentLanguage) === JSON.stringify(englishText)) {
+            setLanguage(frenchQuebecText);
+          } else {
+            setLanguage(englishText);
+          }
         }
-        
-    }
+
+        function changeColor(){
+            if (color === stylesTheme.color){
+                setColor(stylesTheme.color__rgb)
+            }else{
+                setColor(stylesTheme.color)
+            }   
+        }
+      
     return(
         <body>
             <main>
             <section className={styles.container__flex}>
                 <div className={styles.container__column}>     
-                    <h1 className={styles.title}>Hi! I am <span className={color}>Erik</span>, fullstack developer and web designer</h1>
+                    <h1 className={styles.title}>{currentLanguage.intro}<span className={color}>Erik</span>{currentLanguage.intro_occupation}</h1>
                     <hr></hr>
-                    <h2 className={styles.subtitle}>I am a lifelong learner who loves to explore new things on my own and apply that onto new projects.</h2>
+                    <h2 className={styles.subtitle}>{currentLanguage.short_about_me}</h2>
                     <Link className={classNames({
                         [stylesTheme.link__banner]: true,
                         [stylesTheme.link]: true,
                         [stylesTheme.link__button]:true
                     })} 
-                    to="mailto:commercial@erikrmb.com">Send a message</Link>
+                    to="mailto:commercial@erikrmb.com">{currentLanguage.button_send_message}</Link>
                 </div>
                 <div className={styles.banner}>
                     <Banner></Banner>
                 </div>
             </section>
-            <button type="reset" className={styles.gaming__mode} onClick={changeColor}>Teste</button>
+            <button type="button" className={styles.gaming__mode} onClick={changeLanguage}></button>
             <section>
                 <hr className={classNames({
                         [stylesTheme.separator]: true,
@@ -46,14 +89,14 @@ export default function Home(){
                     <div>
                         <Logo></Logo>
                     </div>
-                    <p className={styles.text__aboutme}>I'm a full stack developer who loves learning about new technologies and applying new frameworks onto different projects. Over the past 3 years, I have studied and developed my skills as a developer, until recently I started working as a freelancer. I am really interested in new projects, so if you have a project or an idea try contacting me!</p>   
+                    <p className={styles.text__aboutme}>{currentLanguage.about_me}</p>   
                 </div>
                 <Link className={classNames({
                         [stylesTheme.link__button]: true,
                         [stylesTheme.link]: true,
                         [styles.link__aboutme]:true,
                     })}
-                    to={'/about'}>Read More</Link>   
+                    to={'/about'}>{currentLanguage.button_read_more}</Link>   
             </section>
             <section>
                 <hr className={stylesTheme.separator}></hr>
@@ -78,7 +121,7 @@ export default function Home(){
                         <p className={classNames({
                         [styles.portfolio__featured]: true,
                         [color]: true,
-                    })} >Featured</p>
+                    })} >{currentLanguage.featured}</p>
                         <div className={classNames({
                             [styles.portfolio__card__image]:true,
                             [styles.portfolio__card__imageAluroni]:true,
@@ -88,17 +131,17 @@ export default function Home(){
                                 <h2 className={classNames({
                         [styles.portfolio__title]: true,
                         [color]: true,
-                    })}>Aluroni</h2>
-                                <p className={styles.portfolio__text}>Project made using React</p>
+                    })}>{currentLanguage.project_title[0]}</h2>
+                                <p className={styles.portfolio__text}>{currentLanguage.project_description[0]}</p>
                             </div>
-                            <Link className={styles.portfolio__link} to='https://github.com/Erikrmb/aluroni-react-ts'>Check it out</Link>
+                            <Link className={styles.portfolio__link} to='https://github.com/Erikrmb/aluroni-react-ts'>{currentLanguage.button_check_it}</Link>
                         </div>
                     </div>
                     <div className={styles.portfolio__card}>
                         <p className={classNames({
                         [styles.portfolio__featured]: true,
                         [color]: true,
-                    })} >Featured</p>
+                    })} >{currentLanguage.featured}</p>
                         <div className={classNames({
                             [styles.portfolio__card__image]:true,
                             [styles.portfolio__card__imageAluroni]:true,
@@ -108,10 +151,10 @@ export default function Home(){
                                 <h2 className={classNames({
                         [styles.portfolio__title]: true,
                         [color]: true,
-                    })}>Voll.med API</h2>
-                                <p className={styles.portfolio__text}>API REST developed in Java</p>
+                    })}>{currentLanguage.project_title[1]}</h2>
+                                <p className={styles.portfolio__text}>{currentLanguage.project_description[1]}</p>
                             </div>
-                            <Link className={styles.portfolio__link} to='https://github.com/Erikrmb/aluroni-react-ts'>Check it out</Link>
+                            <Link className={styles.portfolio__link} to='https://github.com/Erikrmb/aluroni-react-ts'>{currentLanguage.button_check_it}</Link>
                         </div>
                     </div>
                 </div>
@@ -120,7 +163,7 @@ export default function Home(){
                         [stylesTheme.link]: true,
                         [styles.link__aboutme]:true 
                     })}
-                    to={'/portfolio'}>Read More</Link>    
+                    to={'/portfolio'}>{currentLanguage.button_read_more}</Link>    
             </section>
             <section>
                 <hr className={stylesTheme.separator}></hr>
@@ -131,9 +174,9 @@ export default function Home(){
                                 [styles.blog__card__imageAluroni]:true,
                             })}></div>
                         <div className={styles.blog__infoBar}>
-                            <h4 className={styles.blog__infoBar__title}>What is UX?</h4>
-                            <p className={styles.blog__infoBar__text}>Understand what is UX and why it is so important.</p>
-                            <p>Read More -»</p>
+                            <h4 className={styles.blog__infoBar__title}>{currentLanguage.blog_title[0]}</h4>
+                            <p className={styles.blog__infoBar__text}>{currentLanguage.blog_short[0]}</p>
+                            <p>{currentLanguage.blog_read_more} -»</p>
                         </div>
                     </div>
                     <div className={styles.blog__card}>
@@ -142,9 +185,9 @@ export default function Home(){
                                 [styles.blog__card__imageAluroni]:true,
                             })}></div>
                         <div className={styles.blog__infoBar}>
-                            <h4 className={styles.blog__infoBar__title}>What is UX?</h4>
-                            <p className={styles.blog__infoBar__text}>Understand what is UX and why it is so important.</p>
-                            <p>Read More -»</p>
+                            <h4 className={styles.blog__infoBar__title}>{currentLanguage.blog_title[1]}</h4>
+                            <p className={styles.blog__infoBar__text}>{currentLanguage.blog_short[1]}</p>
+                            <p>{currentLanguage.blog_read_more} -»</p>
                         </div>
                     </div>
                 </div>   
